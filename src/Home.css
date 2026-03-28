@@ -1,0 +1,210 @@
+:root {
+    --card-width: 320px;
+}
+
+.home-container {
+    color: var(--text);
+}
+.home-page-welcome {
+    min-width: 300px;
+    min-height: 60vh;
+    gap: 1rem;
+    background: linear-gradient(to bottom, transparent, var(--color-background)),
+                linear-gradient(120deg, var(--primary), var(--secondary));
+}
+.home-page-welcome-heading, .home-page-welcome-sub {
+    text-align: center;
+    font-weight: bold;
+}
+.home-page-welcome-heading {
+    font-size: clamp(1.8rem, 6vw, 4rem);
+}
+.home-page-welcome-sub {
+    font-size: clamp(1.1rem, 3vw, 2rem);
+    font-weight: bold;
+    color: var(--text-2);
+}
+
+.search-bar {
+    width: clamp(280px, 100%, 600px);
+    gap: 0.6rem;
+    border-radius: 999px;
+}
+.search-input {
+    border-radius: 999px;
+    font-size: 1.2rem;
+}
+.search-covers {
+    background-color: var(--ori-bg-3);
+    padding: 0.6rem;
+}
+.search-covers:nth-of-type(odd) {
+    border-radius: 50%;
+}
+.search-covers:nth-of-type(even) {
+    width: 100%;
+    border-radius: 999px;
+}
+.filter-button, .search-button {
+    border: 2px solid var(--secondary);
+    width: 3rem;
+    aspect-ratio: 1 / 1;
+    background-color: var(--color-background);
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.2s ease;
+}
+.filter-icon {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.company-container {
+    padding: 3rem;
+    gap: 1rem;
+}
+.company-container-heading {
+    font-size: 1.6rem;
+    color: var(--text);
+}
+.company-tiles {
+    position: relative;
+    border-radius: 1rem;
+    min-width: 300px;
+    background-color: var(--ori-bg-2);
+    padding: 1rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
+    justify-content: center;
+}
+
+.company-tile, .company-image {
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+}
+.company-tile {
+    max-width: 420px;
+    position: relative;
+    background-color: var(--ori-bg-2);
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 0 0.5rem var(--shadow), 0 3px 0.5rem var(--shadow);
+}
+.company-image-cover {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.company-image {
+    width: 50%;
+}
+.company-roles {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    margin: 0.4rem 0;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
+}
+.company-role-name {
+    height: 1.5rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem 0.5rem;
+    border: 2px solid var(--text-2);
+    background-color: var(--ori-bg-3);
+    cursor: pointer;
+    border-radius: 999px;
+}
+
+.company-tile:hover {
+    transform: scale(1.06);
+    box-shadow: inset 0 0 0.5rem var(--primary), 0 0 1rem 1px var(--shadow), 0 3px 0.5rem var(--shadow);
+}
+
+.company-tile:hover .company-image {
+    transform: scale(1.15) translateY(-1rem);
+}
+.company-names {
+    font-size: 1.4rem;
+}
+.no-results {
+    text-align: center;
+    color: var(--text-2);
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
+.companies-header {
+    justify-content: space-between;
+}
+
+/* for filters popup */
+.filter-heading {
+    padding: 0.5rem 0;
+    text-align: left;
+    font-size: 1.4rem;
+}
+.filters-roles {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.filters-package, .package-range {
+    gap: 1rem;
+}
+.selected-role {
+    border: 2px solid var(--secondary);
+    box-shadow: 0 0 0.3rem var(--secondary);
+}
+.filter-buttons {
+    padding: 0 1.5rem;
+    justify-content: space-between;
+}
+.filter-package-slider {
+    background-color: red;
+}
+
+@media (max-width: 800px) {
+    .company-container {
+        padding: 2rem;
+    }
+}
+@media (max-width: 480px) {
+    :root {
+        --card-width: 280px;
+    }
+    .search-input {
+        font-size: 1rem;
+        height: 2rem;
+    }
+    .company-container {
+        padding: 1rem;
+    }
+    .search-icon {
+        display: none;
+    }
+}
+@media (max-width: 320px) {
+    .company-container {
+        padding: 0.5rem;
+    }
+}
+@media (hover: hover) and (pointer: fine) {
+    .filter-button:hover, .search-button:hover {
+        transform: scale(1.08);
+        & svg {
+            transition: transform 0.3s ease;
+            transform: scale(1.2);
+        }
+    }
+    .company-role-name:hover {
+        border: 2px solid var(--primary);
+    }
+}

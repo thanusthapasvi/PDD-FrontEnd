@@ -1,0 +1,314 @@
+:root {
+    --header-height: 4rem;
+    --message-alert: #f44336;
+    --message-success: #4caf50;
+    --message-danger: #EED223;
+}
+
+main {
+    position: relative;
+    background: linear-gradient(to bottom, transparent 60%, rgba(255, 0, 255, 0.1));
+}
+.main-with-header {
+    padding-top: var(--header-height);
+}
+.main-login-page {
+    height: 100%;
+}
+
+.a-page {
+    min-height: calc(100vh - 3.5rem - var(--header-height));
+}
+
+hr {
+    width: 100%;
+    background-color: var(--text-2);
+}
+/* Gradient text */
+.grad-text {
+    width: fit-content;
+    background: linear-gradient(120deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    /* -webkit-text-stroke: 0.5px var(--text); */
+}
+/* hr customs */
+.grad-hr {
+    margin: 0 0 1rem 0;
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, var(--secondary), var(--primary), var(--secondary));
+    animation: hr-entry-flow 0.8s ease;
+}
+@keyframes hr-entry-flow {
+    0% {
+        width: 0;
+        box-shadow: 0 0 5px var(--secondary);
+    }
+    100% {
+        width: 100%;
+        box-shadow: 0 0 5px var(--secondary);
+    }
+}
+/* Inputs */
+.input-cover {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.2rem;
+}
+.input-box, .input-label {
+    width: 100%;
+}
+.input-box, .input-select {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    border: 2px solid var(--text);
+    color: var(--text);
+    border-radius: 0.5rem;
+    background-color: transparent;
+    scroll-margin-top: calc(var(--header-height) + 3rem);
+}
+.input-label {
+    padding: 0.5rem 0;
+    text-align: left;
+    font-size: 1.2rem;
+}
+.input-select-option {
+    background-color: var(--ori-bg-1);
+}
+.remove-row-btn:hover {
+    background-color: red;
+    cursor: pointer;
+}
+/* for profile and settings page */
+.page-box {
+    width: clamp(300px, 100%, 600px);
+    background-color: var(--ori-bg-2);
+    border-radius: 1rem;
+    color: var(--text);
+    gap: 1rem;
+}
+
+/* for popups in filters and profile pic */
+.popup {
+    position: fixed;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    margin-top: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.07);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    z-index: 10;
+}
+.pop {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 1rem 0.5rem 1rem;
+    width: clamp(300px, 100%, 540px);
+    min-width: 300px;
+    background-color: var(--ori-bg-3);
+    border-radius: 0.6rem;
+    gap: 1.5rem;
+    color: var(--text);
+}
+.pop-close {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    width: 2rem;
+    aspect-ratio: 1 / 1;
+    padding: 0.3rem 0.5rem;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: var(--ori-bg-3);
+    color: var(--text);
+}
+.pop-close:hover {
+    background-color: red;
+    color: var(--primary)
+}
+.popup-head {
+    position: absolute;
+    width: 60%;
+    height: 4rem;
+    top: -2rem;
+    left: 50%;
+    border-radius: 0.5rem 0.5rem 1rem 1rem;
+    border: 2px solid var(--ori-bg-3);
+    background: var(--grad-1);
+    transform: translateX(-50%);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 0.5rem;
+}
+
+/* for back button */
+.back-to-home {
+    margin: 0 0 0.5rem 0;
+}
+.back-to-home-button {
+    background-color: transparent;
+    color: var(--text);
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    outline: 2px solid transparent;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+.back-to-home-button:hover {
+    color: var(--primary);
+    background-color: var(--ori-bg-2);
+}
+.back-to-home-button:active {
+    color: var(--secondary);
+}
+.back-to-home-button:focus-visible {
+    border: 2px solid var(--primary);
+    outline: 2px solid var(--secondary);
+    outline-offset: 4px;
+}
+
+/* Edit and Delete Icons */
+.edit-icon, .delete-icon, .copy-icon, .bookmark-icon {
+    width: 2.5rem;
+    aspect-ratio: 1 / 1;
+    background-color: transparent;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    & svg {
+        transition: 0.2s ease;
+    }
+}
+
+/* Box shadow and color*/
+.box-shadow-danger {
+    box-shadow: inset 0 0 1rem var(--message-danger);
+}
+.box-shadow-alert {
+    box-shadow: inset 0 0 1rem var(--message-alert);
+}
+.color-danger {
+    color: var(--message-danger);
+}
+.color-alert {
+    color: var(--message-alert);
+}
+/* Difficulty */
+.easy {
+    --difficulty: #2ECC71;
+}
+.easy-medium {
+    --difficulty: #C0CA33;
+}
+.medium {
+    --difficulty: #FFB300;
+}
+.medium-hard {
+    --difficulty: #E67E22;
+}
+.hard {
+    --difficulty: #E74C3C;
+}
+/* for Message */
+.success {
+    --message-color: var(--message-success);
+}
+.normal {
+    --message-color: var(--primary);
+}
+.alert {
+    --message-color: var(--message-alert);
+}
+.message-box {
+    bottom: 1rem;
+    left: 50%;
+    width: clamp(240px, 90%, 460px);
+    transform: translateX(-50%);
+    border-radius: 0.5rem;
+    border-top: 3px solid var(--message-color);
+    border-bottom: 3px solid var(--message-color);
+    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(4px);
+    font-weight: bold;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: var(--message-color);
+    font-size: 1.2rem;
+    z-index: 1000;
+    pointer-events: none;
+    animation: messageAni 3s ease;
+}
+@keyframes messageAni {
+    0%, 100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(1rem);
+    }
+    30% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-0.5rem);
+    }
+    50%, 80% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .edit-icon, .delete-icon {
+        width: 2.5rem;
+    }
+    .popup-head {
+        font-size: 1.3rem;
+    }
+    .input-box {
+        padding: 0.4rem;
+    }
+    .input-label {
+        font-size: 1rem;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .edit-icon:hover, .delete-icon:hover, .copy-icon:hover, .bookmark-icon:hover {
+        & svg {
+            transform: scale(0.95);
+            fill: var(--text);
+        }
+    }
+    .edit-icon:hover, .bookmark-icon:hover {
+        background-color: var(--primary);
+    }
+    .bookmark-icon:hover .bookmarked {
+        background-color: var(--message-success);
+    }
+    .delete-icon:hover {
+        background-color: var(--message-alert);
+    }
+    .copy-icon:hover {
+        background-color: var(--secondary);
+    }
+    .input-box:hover, .input-select:hover {
+        border: 2px solid var(--secondary);
+    }
+}

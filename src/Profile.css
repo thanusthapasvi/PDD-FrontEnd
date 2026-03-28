@@ -1,0 +1,81 @@
+.profile-heading, .detail-edit {
+    color: var(--text);
+}
+.profile-header {
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+.profile-pic-cover, .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.profile-pic-cover {
+    border: 3px solid var(--secondary);
+    box-sizing: content-box;
+}
+.profile-details {
+    gap: 0.6rem;
+    padding: 0 1rem 1rem 1rem;
+}
+.profile-detail-item {
+    gap: 0.3rem;
+}
+.detail-label {
+    font-size: 1.1rem;
+}
+.detail-value, .detail-edit {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    background-color: hsl(from var(--color-background) h s calc(l + 20));
+    border-radius: 0.4rem;
+}
+.detail-edit {
+    border: 2px solid hsl(from var(--color-background) h s calc(l + 40));
+}
+.detail-edit:focus {
+    border: 2px solid var(--primary);
+    outline: none;
+}
+.detail-edit:focus-visible {
+    outline: 2px solid var(--primary);
+}
+
+.edit-save {
+    justify-content: space-around;
+}
+
+/* Avatars pop*/
+.avatars-pics {
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.avatars-img {
+    width: 5rem;
+    aspect-ratio: 1 / 1;
+    background: var(--grad-3);
+    border: 2px solid var(--text);
+    border-radius: 50%;
+    cursor: pointer;
+    transform: 0.2s ease;
+}
+.avatars-img.selected {
+    border: 3px solid var(--secondary);
+}
+
+@media (max-width: 450px) {
+    .avatars-img {
+        width: 3.5rem;
+        border: 3px solid var(--text);
+    }
+}
+@media (hover: hover) and (pointer: fine) {
+    .detail-edit:hover {
+        border-color: var(--secondary);
+    }
+    .avatars-img:hover {
+        border: 2px solid var(--primary);
+        transform: scale(1.05);
+    }
+}

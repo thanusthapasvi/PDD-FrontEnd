@@ -1,0 +1,108 @@
+.interview-experience-page {
+    padding: 1rem;
+    color: var(--text);
+}
+.interview-experience-cover {
+    width: clamp(300px, 100%, 1000px);
+    background-color: var(--ori-bg-2);
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 1rem;
+}
+.interview-experience-options {
+    justify-content: space-between;
+}
+.interview-experience-head {
+    gap: 1rem;
+}
+.interview-experince-user-pic {
+    width: 4.5rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 2px solid var(--secondary);
+}
+.interview-experience-user {
+    gap: 0.4rem;
+}
+.interview-experience-user-name {
+    font-size: 1.4rem;
+}
+.interview-experience-meta {
+    gap: 0.5rem;
+    color: var(--text)
+}
+.option-buttons {
+    gap: 0.5rem;
+}
+
+.interview-experince-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+
+    & ul {
+        margin-left: 2rem;
+    }
+}
+.interview-experince-section-heading {
+    font-size: 1.6rem;
+}
+.interview-experience-difficulty, .interview-experience-role, .interview-experience-hired-role {
+    padding: 0 0.5rem;
+    height: 2rem;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    vertical-align: center;
+    font-size: 1.1rem;
+}
+.interview-experience-hired-role {
+    background-color: var(--secondary);
+}
+.interview-experience-role {
+    background-color: var(--primary);
+}
+.interview-experience-difficulty {
+    background-color: var(--difficulty, var(--primary));
+}
+
+.delete-box {
+    font-size: 1.4rem;
+    gap: 1rem;
+}
+@media (max-width: 580px) {
+    .interview-experience-title {
+        font-size: 1.6rem;
+    }
+    .interview-experince-section-heading {
+        font-size: 1.4rem;
+    }
+    .interview-experince-section {
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 480px) {
+    .option-buttons {
+        flex-direction: column;
+    }
+    .interview-experince-user-pic {
+        width: 4rem;
+    }
+    .interview-experience-user-name {
+        font-size: 1.1rem;
+    }
+    .interview-experience-title {
+        font-size: 1.4rem;
+    }
+    .interview-experince-section-heading {
+        font-size: 1.3rem;
+    }
+    .interview-experince-section {
+        font-size: 1rem;
+    }
+    .interview-experience-difficulty, .interview-experience-role, .interview-experience-hired-role {
+        font-size: 0.8rem;
+    }
+}

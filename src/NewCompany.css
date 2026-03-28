@@ -1,0 +1,41 @@
+.new-company-box {
+    gap: 1rem;
+}
+
+.new-company-form {
+    gap: 1rem;
+}
+.new-company-section {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--ori-bg-1);
+}
+.new-company-section-head {
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.new-company-form {
+    gap: 0.5rem;
+}
+.remove-row-btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--secondary);
+    font-size: 1.2rem;
+    color: var(--text);
+    border-radius: 0.4rem;
+    border: none;
+}
+
+.new-company-image {
+    font-size: 1.1rem;
+    color: var(--text);
+
+    & code {
+        background-color: var(--ori-bg-1);
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.3rem;
+        font-size: 0.9rem;
+        color: var(--secondary);
+    }
+}

@@ -1,0 +1,67 @@
+.bookmarks-page {
+    color: var(--text);
+    gap: 1rem;
+}
+.bookmarks-list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.bookmark-card {
+    width: fit-content;
+    background-color: var(--ori-bg-2);
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+.bookmark-experience-user-info {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.bookmark-experience-user {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.bookmark-experience-user-pic {
+    width: 3rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 2px solid var(--secondary);
+}
+.bookmark-experience-filters {
+    color: var(--text);
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+.bookmark-experience-hired-role, .bookmark-experience-role, .bookmark-experience-difficulty {
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+    color: white;
+    font-weight: bold;
+}
+.bookmark-experience-hired-role {
+    background-color: var(--primary);
+}
+.bookmark-experience-role {
+    background-color: var(--secondary);
+}
+.bookmark-experience-difficulty {
+    background-color: var(--difficulty, var(--primary));
+}
+
+.bookmark-experience-company {
+    color: var(--primary);
+    font-weight: bold;
+    cursor: pointer;
+}
+.bookmark-experience-company:hover {
+    text-decoration: underline;
+}
+

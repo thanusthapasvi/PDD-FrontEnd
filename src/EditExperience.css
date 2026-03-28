@@ -1,0 +1,63 @@
+.edit-experience-page {
+    color: var(--text);
+    gap: 1rem;
+}
+.edit-experience-box {
+    width: clamp(300px, 100%, 560px);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: var(--grad-3);
+}
+.experience-form {
+    padding: 0.5rem;
+    gap: 0.4rem;
+}
+.label-with-options {
+    justify-content: space-between;
+}
+.interview-experience-points {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.add-remove-point-buttons {
+    gap: 0.5rem;
+}
+.add-point-btn, .remove-point-btn {
+    width: 2rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid var(--text);
+    cursor: pointer;
+}
+.add-point-btn {
+    background-color: var(--primary);
+}
+.remove-point-btn {
+    background-color: var(--secondary);
+}
+.experience-sub-headings {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.5rem 0;
+}
+
+.hr-experience {
+    margin-top: 0.6rem;
+    width: 100%;
+    border-color: var(--message-danger);
+    transform-origin: center;
+    animation: hrAni 0.4s ease;
+}
+@keyframes hrAni {
+    0% {
+        width: 0%;
+        box-shadow: 0 0 4px var(--message-danger);
+    }
+    100% {
+        width: 100%;
+        box-shadow: 0 0 2px var(--text);
+    }
+}

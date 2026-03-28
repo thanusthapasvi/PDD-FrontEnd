@@ -1,0 +1,139 @@
+.login-page {
+    margin: 1rem 0;
+}
+.login-container {
+    width: clamp(300px, 100%, 420px);
+    min-width: 300px;
+    gap: 0.7rem;
+    background: var(--grad-3);
+    color: var(--text);
+    border-radius: 1rem;
+}
+.login-intro {
+    text-align: center;
+}
+.site-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin: 0;
+}
+.site-sub-heading {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: var(--secondary);
+}
+.login-form, .signup-form {
+    width: 90%;
+    gap: 0.5rem;
+}
+
+.sign-up-text {
+    font-size: 1rem;
+    color: var(--text);
+    gap: 0.5rem;
+}
+.sign-up-text-button {
+    font-size: 1rem;
+    background-color: transparent;
+    color: var(--secondary);
+    border: none;
+}
+.otp-box {
+    gap: 0.5rem;
+}
+.otp-box:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.otp-send, .otp-verify {
+    padding: 0.5rem 0.3rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    border: 3px solid var(--text);
+    background: var(--primary);
+    color: var(--text);
+    opacity: 0.85;
+}
+
+.otp-send:disabled, .otp-verify:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.forgot-pass {
+    color: var(--secondary);
+}
+
+.agree-label {
+    position: relative;
+    margin-top: 0.3rem;
+    font-size: 0.9rem;
+    color: var(--text);
+    padding-left: 1.2rem;
+
+    & input {
+        cursor: pointer;
+        margin: 0 0.5rem 0 0;
+    }
+    & a {
+        color: var(--secondary);
+        cursor: pointer;
+        text-decoration: none;
+        transition: 0.2s ease;
+    }
+    & a:hover {
+        text-decoration: underline;
+    }
+}
+/* checkbox */
+.agree-label::after, .agree-label::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.agree-label::after {
+    content: '';
+    border: 2px solid var(--secondary);
+    z-index: 1;
+}
+.agree-label::before {
+    content: '✓';
+    display: none;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 2;
+}
+.agree-label:has(#agree-to-terms:checked)::after {
+    background-color: var(--secondary);
+    box-shadow: 0 0 0.4rem var(--secondary);
+}
+.agree-label:has(#agree-to-terms:checked)::before {
+    display: flex;
+}
+#agree-to-terms {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+@media (max-width: 480px) {
+    .login-container {
+        padding: 0.6rem;
+    }
+    .site-heading {
+        font-size: 1.7rem;
+    }
+    .site-sub-heading {
+        font-size: 1.3rem;
+    }
+}
+@media (hover: hover) and (pointer: fine) {
+    .sign-up-text-button:hover, .forgot-pass:hover {
+        text-decoration: underline;
+    }
+}

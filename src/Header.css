@@ -1,0 +1,71 @@
+header {
+    height: var(--header-height);
+    background-color: var(--ori-bg-1);
+    background: var(--grad-3);
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 4px var(--shadow);
+    justify-content: space-between;
+    z-index: 99;
+}
+.main-logo {
+    width: 200px;
+}
+
+.profile-icon, .profile-img, .profile-img-cover {
+    border-radius: 50%;
+}
+
+.profile-icon {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--text-2);
+    border: 2px solid var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-img, .profile-img-cover {
+    width: 2.8rem;
+    height: 2.8rem;
+}
+.profile-img-cover {
+    border: 1px solid var(--secondary);
+    overflow: hidden;
+}
+.profile-menu {
+    width: 10rem;
+    align-items: center;
+    top: 100%;
+    right: 0;
+    background-color: var(--ori-bg-2);
+    gap: 0.3rem;
+    padding: 0.4rem 0;
+    border-radius: 0.5rem;
+    transition: 0.2s ease;
+    overflow: hidden;
+}
+.menu-option {
+    cursor: pointer;
+    width: 90%;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.2rem;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: none;
+    color: var(--text);
+    text-align: left;
+    border: 2px solid transparent;
+}
+.logout-option {
+    color: var(--message-alert);
+}
+.menu-option:active {
+    background-color: var(--ori-bg-1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .menu-option:hover {
+        background-color: var(--ori-bg-3);
+    }
+}

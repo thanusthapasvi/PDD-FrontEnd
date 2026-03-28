@@ -1,0 +1,255 @@
+.company-page {
+    color: var(--text);
+    gap: 1rem;
+}
+.company-name {
+    font-size: 2.5rem;
+    padding: 0 1rem;
+}
+.company-page-tile {
+    min-width: 300px;
+    background-color: var(--ori-bg-1);
+    border-radius: 0.5rem;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    box-shadow: 0 3px 0.5rem var(--shadow);
+}
+.company-info-cover {
+    justify-content: space-between;
+}
+.company-info-box {
+    gap: 0.4rem;
+}
+.company-image-box {
+    width: clamp(100px, 100%, 200px);
+    min-width: 100px;
+
+    & img {
+        width: 100%;
+    }
+}
+
+.company-page-tile-head {
+    margin-bottom: 0.5rem;
+    justify-content: space-between;
+}
+.company-page-headers {
+    font-size: 1.6rem;
+}
+
+.company-info-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.company-info {
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+.exam-pattern {
+    font-size: 1.2rem;
+    width: clamp(280px, 100%, 800px);
+    max-width: 800px;
+    margin: 0 auto;
+    & thead {
+        color: var(--secondary);
+    }
+}
+table {
+    border-spacing: 0;
+}
+th, td {
+    border: 1px solid var(--text-2);
+    padding: 0.4rem 0.6rem;
+}
+.experience-card, .experience-header, .experience-filters, .experience-user-info {
+    display: flex;
+    gap: 0.5rem;
+}
+.experience-card {
+    flex-direction: column;
+    padding: 0.5rem 0.6rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--text-2);
+    transition: 0.2s ease;
+}
+.experience-header {
+    align-items: center;
+    justify-content: space-between;
+}
+.experience-user-info {
+    align-items: center;
+    color: var(--text);
+}
+.experience-user-pic {
+    width: 2.2rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+.experience-user-pic:nth-last-of-type(odd) {
+    border: 2px solid var(--secondary);
+}
+.experience-user-pic:nth-last-of-type(even) {
+    border: 2px solid var(--primary);
+}
+.experience-filters {
+    display: flex;
+    align-items: center;
+    color: var(--text-2);
+}
+
+.view-full-btn {
+    width: 120px;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.5rem;
+    color: var(--primary);
+    border-radius: 0.4rem;
+    border: 2px solid var(--secondary);
+    cursor: pointer;
+    background: var(--grad-1);
+    transition: 0.2s ease;
+}
+.view-full-btn:active {
+    transform: scale(0.9);
+}
+
+.faqs-cover {
+    gap: 1rem;
+}
+.faqs-symbol-marks {
+    font-weight: bold;
+}
+.faq-card {
+    background-color: var(--ori-bg-2);
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 0.4rem var(--shadow);
+}
+.faq-question {
+    margin-bottom: 0.5rem;
+}
+.faq-answer {
+    font-size: 1.1rem;
+}
+
+.faq-code-section {
+    margin-top: 0.5rem;
+}
+.faq-code-slider {
+    width: 100%;
+    max-width: 330px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--ori-bg-3);
+    box-shadow: 0 2px 0.4rem var(--shadow);
+    border-radius: 999px;
+    padding: 5px;
+}
+.faq-slider-titles {
+    width: 5.5rem;
+    height: 40px;
+    transition: 0.3s ease;
+    border-radius: 999px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--ori-bg-1);
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.faq-slider-titles.active {
+    border: 2px solid var(--secondary);
+}
+
+.faq-code-head {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0.5rem 0.5rem 0 1rem;
+    justify-content: space-between;
+    background: var(--grad-1);
+}
+.faq-code-copy {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    background-color: var(--ori-bg-3);
+}
+
+.faq-code {
+    min-width: 250px;
+    max-width: 80%; /* Prevents it from pushing out the parent */
+    overflow: hidden;
+    margin: 0.5rem auto;
+    background-color: var(--ori-bg-3);
+    border: 1px solid var(--primary);
+    border-radius: 0.5rem;
+}
+.faq-code pre {
+    white-space: pre-wrap;       /* Allows text to wrap to the next line */
+    word-wrap: break-word;       /* Breaks long strings of code if necessary */
+    overflow-x: auto;            /* Adds a scrollbar if the code is still too wide */
+    width: 100%;
+    border-radius: 8px;
+    padding: 1rem;
+}
+.faq-code pre code {
+    padding: 0.5rem;
+    display: block;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+.delete-text-high {
+    color: var(--message-alert);
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .company-page-tile {
+        padding: 0.5rem 1rem;
+    }
+}
+@media (max-width: 480px) {
+    .interview-experience-options {
+        display: flex;
+        flex-direction: column;
+
+        & button {
+            width: 2rem;
+        }
+    }
+    .company-page-headers {
+        font-size: 1.4rem;
+    }
+    .company-page-tile {
+        padding: 0.5rem 1rem;
+    }
+    .exam-pattern {
+        font-size: 0.8rem;
+    }
+    .company-info-cover, .company-exam-pattern {
+        padding: 0.5rem 1rem;
+    }
+    .company-info-cover {
+        flex-direction: column-reverse;
+    }
+}
+@media (hover: hover) and (pointer: fine) {
+    .experience-card:hover {
+        box-shadow: 0 3px 0.3rem var(--shadow);
+        transform: translateY(-2px);
+    }
+
+    .faq-slider-titles:hover {
+        background-color: var(--ori-bg-3);
+        border: 2px solid var(--primary);
+    }
+}

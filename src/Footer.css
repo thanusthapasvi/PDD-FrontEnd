@@ -1,0 +1,13 @@
+footer {
+    min-width: 300px;
+    background-color: var(--ori-bg-2);
+    font-size: 1.2rem;
+    color: var(--text);
+    padding: 0.8rem 0.5rem;
+    text-align: center;
+
+    & p {
+        margin: 0 auto;
+        font-weight: bold;
+    }
+}
